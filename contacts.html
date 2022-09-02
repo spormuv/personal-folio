@@ -24,9 +24,11 @@
               <img src="img/code.svg" alt="" />
             </div>
             <nav class="header-nav">
-              <a class="header-nav-link active" href="index.html">Home</a>
+              <a class="header-nav-link" href="index.html">Home</a>
               <a class="header-nav-link" href="about.html">About me</a>
-              <a class="header-nav-link" href="contacts.html">Contacts</a>
+              <a class="header-nav-link active" href="contacts.html"
+                >Contacts</a
+              >
             </nav>
           </div>
         </div>
@@ -35,21 +37,42 @@
       <div class="container">
         <main class="content">
           <div class="content-header">
-            <h2 class="subtitle">My name is</h2>
-            <h1 class="title">
-              Mikhail Tarasov and I'm <span>Web Developer</span>
-            </h1>
-          </div>
-          <div class="text">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, velit
-              eos at quis, aperiam facere rerum necessitatibus incidunt quisquam
-              nobis omnis delectus voluptatum! Consectetur, numquam nulla
-              laudantium eum perspiciatis voluptatibus?
-            </p>
+            <h1 class="title">Write me a <span>message</span></h1>
+            <div class="text">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
           </div>
 
-          <a class="btn" href="contacts.html">Contact me</a>
+          <form class="form" action="/" method="post">
+            <div class="form-group">
+              <input class="input" type="text" name="name" placeholder="Name" />
+            </div>
+
+            <div class="form-group">
+              <input
+                class="input"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+
+            <div class="form-group">
+              <input class="input" type="tel" name="tel" placeholder="Phone" />
+            </div>
+
+            <div class="form-group">
+              <textarea
+                class="textarea"
+                name="text"
+                placeholder="Message"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-full" type="submit">Send Message</button>
+            </div>
+          </form>
         </main>
       </div>
 
