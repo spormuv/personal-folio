@@ -29,8 +29,9 @@ p {
 }
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1030px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /*page
@@ -39,10 +40,13 @@ p {
 .page {
   width: 100%;
   height: 100vh;
+  min-height: 770px;
   position: relative;
 
   background: #000 url(../img/bg.jpg) center no-repeat;
   background-size: cover;
+
+  overflow: hidden;
 }
 
 /*header
@@ -109,7 +113,9 @@ p {
 =====================*/
 
 .content {
-  width: 565px;
+  height: 100%;
+  width: 100%;
+  max-width: 565px;
 }
 
 .content-header {
@@ -178,7 +184,7 @@ p {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 80vh;
+  height: 80%;
 }
 
 /*footer
@@ -272,4 +278,79 @@ p {
 .input::placeholder,
 .textarea::placeholder {
   color: #fff;
+}
+
+/*media
+=====================*/
+
+@media (max-width: 1000px) {
+  .author {
+    right: -170px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  .header {
+    margin-bottom: 50px;
+  }
+  .header-logo {
+    display: none;
+  }
+  .header-brand {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    max-width: none;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .form {
+    margin: 0 auto;
+  }
+
+  .footer {
+    position: static;
+  }
+
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts-link {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .contacts-link:last-child {
+    margin-bottom: 0;
+  }
+  .contacts-link:last-child::after {
+    display: none;
+  }
+  .author {
+    display: none;
+  }
+}
+
+@media (max-width: 565px) {
+  .header-inner {
+    flex-direction: column;
+  }
+  .header-brand {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
 }
